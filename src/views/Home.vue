@@ -7,7 +7,6 @@
     >
       <div class="text-center">
         <v-icon
-        v-if="false"
           class="mdi mdi-hospital-building mb-4"
           color="white"
           alt="logo"
