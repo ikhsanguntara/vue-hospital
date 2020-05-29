@@ -1,6 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import router from '../router';
+import createPersistedState from "vuex-persistedstate";
 import hospital from "./modules/hospital";
 import doctor from "./modules/doctor";
 import patient from "./modules/patient"
@@ -10,9 +11,9 @@ import user from "./modules/user"
 Vue.use(Vuex)
 
 export default new Vuex.Store({
-  // plugins: [
-  //   createPersistedState({ key: "local", paths: ["token", "selectedPatient"] }),
-  // ],
+  plugins: [
+    createPersistedState({ key: "local", paths: ["token", "selectedPatient"] }),
+  ],
   state: {
     token: null,
     loading: false,
